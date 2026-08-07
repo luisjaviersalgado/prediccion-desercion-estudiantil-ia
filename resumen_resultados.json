@@ -1,0 +1,97 @@
+{
+  "n_total": 2400,
+  "n_train": 1440,
+  "n_val": 480,
+  "n_test": 480,
+  "tasa_desercion_global": 0.42333333333333334,
+  "umbral_decision": 0.25,
+  "metricas_modelos": [
+    {
+      "modelo": "Regresión Logística",
+      "exactitud": 0.6229166666666667,
+      "precision": 0.5723684210526315,
+      "sensibilidad_recall": 0.42857142857142855,
+      "f1": 0.49014084507042255,
+      "auc_roc": 0.6772243068769896
+    },
+    {
+      "modelo": "Random Forest",
+      "exactitud": 0.6604166666666667,
+      "precision": 0.6176470588235294,
+      "sensibilidad_recall": 0.5172413793103449,
+      "f1": 0.5630026809651475,
+      "auc_roc": 0.6738809553449165
+    },
+    {
+      "modelo": "Red Neuronal (MLP)",
+      "exactitud": 0.5458333333333333,
+      "precision": 0.48,
+      "sensibilidad_recall": 0.8866995073891626,
+      "f1": 0.6228373702422145,
+      "auc_roc": 0.6575910085184328
+    }
+  ],
+  "equidad_genero": {
+    "tabla": [
+      {
+        "grupo": "Femenino",
+        "n": 251,
+        "tasa_seleccion": 0.8167330677290837,
+        "tpr": 0.9090909090909091,
+        "fpr": 0.756578947368421
+      },
+      {
+        "grupo": "Masculino",
+        "n": 229,
+        "tasa_seleccion": 0.74235807860262,
+        "tpr": 0.8653846153846154,
+        "fpr": 0.64
+      }
+    ],
+    "resumen": {
+      "disparate_impact_ratio": 0.9089359889232079,
+      "equal_opportunity_difference": 0.04370629370629364,
+      "equalized_odds_difference": 0.116578947368421
+    }
+  },
+  "equidad_estrato": {
+    "tabla": [
+      {
+        "grupo": "Alto (5-6)",
+        "n": 72,
+        "tasa_seleccion": 0.7361111111111112,
+        "tpr": 0.875,
+        "fpr": 0.625
+      },
+      {
+        "grupo": "Bajo (1-2)",
+        "n": 171,
+        "tasa_seleccion": 0.8362573099415205,
+        "tpr": 0.9113924050632911,
+        "fpr": 0.7717391304347826
+      },
+      {
+        "grupo": "Medio (3-4)",
+        "n": 237,
+        "tasa_seleccion": 0.7552742616033755,
+        "tpr": 0.8695652173913043,
+        "fpr": 0.6827586206896552
+      }
+    ],
+    "resumen": {
+      "disparate_impact_ratio": 0.8802447552447553,
+      "equal_opportunity_difference": 0.04182718767198679,
+      "equalized_odds_difference": 0.1467391304347826
+    }
+  },
+  "arquitectura_mlp": {
+    "capas_ocultas": [
+      64,
+      32
+    ],
+    "activacion": "ReLU",
+    "optimizador": "Adam",
+    "n_iteraciones_reales": 45,
+    "alpha_regularizacion": 0.001
+  }
+}
